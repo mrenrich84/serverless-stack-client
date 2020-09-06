@@ -28,7 +28,7 @@ const prod = {
     },
     apiGateway: {
         REGION,
-        URL: "YOUR_PROD_API_GATEWAY_URL"
+        URL: "https://rxv1gwvz5d.execute-api.us-east-1.amazonaws.com/prod"
     },
     cognito: {
         REGION,
