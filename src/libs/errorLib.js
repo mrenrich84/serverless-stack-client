@@ -1,4 +1,5 @@
-import * as Sentry from "@sentry/browser";
+import * as Sentry from "@sentry/react";
+import {Integrations} from "@sentry/tracing";
 
 const isLocal = process.env.NODE_ENV === "development";
 
@@ -9,6 +10,9 @@ export function initSentry() {
 
     Sentry.init({
         dsn: "https://582e65b9eb8d41a0ab2dcf6fe28fc851@o441655.ingest.sentry.io/5412145",
+        integrations: [
+            new Integrations.BrowserTracing(),
+        ],
         tracesSampleRate: 1.0,
     });
 }
